@@ -20,7 +20,7 @@ RUN apt-get update && \
     curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y --no-install-recommends nodejs && \
     npm install -g npm@latest && \
-    npm install -g --include=optional @openai/codex@latest && \
+    npm install -g --include=optional @openai/codex0.133 && \
     node --version && \
     npm --version && \
     codex --version && \
