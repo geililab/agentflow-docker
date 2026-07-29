@@ -13,7 +13,7 @@ docker build -t agentflow:latest .
 ```bash
 docker run -d \
   --name agentflow \
-  -p 48285:48285 \
+  -p 3333:3333 \
   -e GIT_USER_NAME="Your Name" \
   -e GIT_USER_EMAIL="you@example.com" \
   -v "$(pwd)/workspace":/workspace \

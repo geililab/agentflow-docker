@@ -29,7 +29,7 @@ configure_agentflow_runtime() {
 
   {
     printf 'HOST=%s\n' "${HOST:-0.0.0.0}"
-    printf 'PORT=%s\n' "${PORT:-48285}"
+    printf 'PORT=%s\n' "${PORT:-3333}"
     cat "$tmp_env"
   } >"$agentflow_env_path"
   rm -f "$tmp_env"

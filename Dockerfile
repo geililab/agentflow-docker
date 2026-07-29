@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV HOST=0.0.0.0
-ENV PORT=48285
+ENV PORT=3333
 ENV WORKSPACE_DIR=/workspace
 ENV AGENTFLOW_HOME=/root/.agentflow
 ENV PATH="/root/.agentflow/bin:${PATH}"
@@ -36,7 +36,7 @@ RUN chmod 755 /usr/local/bin/agentflow-docker-entrypoint && \
     mkdir -p "$WORKSPACE_DIR"
 
 WORKDIR /workspace
-EXPOSE 48285
+EXPOSE 3333
 
 ENTRYPOINT ["/usr/bin/tini", "--", "/usr/local/bin/agentflow-docker-entrypoint"]
 CMD ["agentflow"]
